@@ -54,7 +54,7 @@ jobs:
   
   install-image:
     runs-on: ubuntu-latest
-    need: build
+    needs: build
     steps:
       - name: install dind image
         run: docker pull dipakrasal2009/docker-inside-docker-dind
