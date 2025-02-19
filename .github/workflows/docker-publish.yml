@@ -58,3 +58,10 @@ jobs:
     steps:
       - name: install dind image
         run: docker pull dipakrasal2009/docker-inside-docker-dind
+
+  run-image:
+    run-on: ubuntu-latest
+    needs: install-image
+    steps: 
+      - name: run the image
+        run: docker run -dit --name OS1 docker-inside-docker-dind
