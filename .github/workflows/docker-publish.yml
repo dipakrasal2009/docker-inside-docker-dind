@@ -60,7 +60,7 @@ jobs:
         run: docker pull dipakrasal2009/docker-inside-docker-dind
 
   run-image:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: install-image
     steps: 
       - name: run the image
